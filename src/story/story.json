@@ -1,0 +1,137 @@
+{
+    "title" : "The Hero's Quest",
+    "startNodeId" : "camp",
+    "nodes" : {
+        "camp" :{
+            "title": "The fist decision",
+            "text": "You wake up ready to take on the world, the time has finally come for your first quest hero. Choose your weapon wisely.",
+            "choices": [
+                {"label": "Take the sword", "nextId": "fighterPath"},
+                {"label": "Take the bow", "nextId": "rangerPath"}
+                {"label": "Take the staff", "nextId": "wizardPath"}
+            ]
+        },
+        "fighterPath":{
+            "title": "City watch quest",
+            "text": "You are given a sword and plate armor. The city awaits your protection. As you patrol the streets, you hear a commotion near the market square. A group of bandits is causing trouble. What do you do?",
+            "choices": [
+                {"label": "Attack the bandits head-on", "nextId:" : "banditFight"},
+                {"label": "Protect the civilians" , "nextId:" : "protectCivilians"}
+            ]
+        },
+        "rangerPath":{
+            "title": "Forest Expedition",
+            "text": "You are given a bow, a quiver full of arrows and a map. As you venture into the dense forest trying to track a group of bandits, you hear rustling in the bushes. Suddenly, a direwolf leaps out in front of you. What do you do?",
+            "choices": [
+                {"label": "Shoot an arrow at the direwolf", "nextId:" : "wolfFight"},
+                {"label": "Try to calm the direwolf" , "nextId:" : "calmWolf"}
+            ]
+        },
+        "wizardPath":{
+            "title": "Ancient Ruins",
+            "text": "You are given a staff and a spellbook. As you explore the ancient ruins, you come across a magical barrier blocking the main entrance. You also notice a hidden side passage that might lead you around the barrier. What do you do?",
+            "choices": [
+                {"label": "Use a spell to dispel the barrier", "nextId:" : "dispelBarrier"},
+                {"label": "Take the hidden side passage" , "nextId:" : "sidePassage"}
+            ]
+        },
+        "banditFight":{
+            "title": "Ending : Brute Force",
+            "text": "You charge at the bandits with your sword drawn. After a fierce battle, you manage to defeat them but a couple of civilians are fatally wounded in the crossfire. You are hailed as a hero but the eyes of the children you couldn't save haunt you.",
+            "choices": []
+        },
+        "protectCivilians":{
+            "title": "Patient Aproach",
+            "text": "You focus on protecting the civilians, guiding them to safety. The bandits, seeing their plan foiled, flee the scene. You could hunt down the bandits now or enjoy the cheers of the grateful townsfolk, after all your duty is to protect, and you did that well.",
+            "choices":[
+                {"label": "Hunt down the bandits", "nextId:" : "banditHunt"},
+                {"label": "Celebrate with the townsfolk" , "nextId:" : "townCelebration"}
+            ]
+        },
+        "wolfFight":{
+            "title": "Ending : Quick Reflexes",
+            "text": "You quickly notch an arrow and shoot the direwolf directly in the head. The beast collapses, but its packmates emerge from the shadows, surrounding you. Outnumbered and outmatched, you are forced to retreat, leaving the bandits unchallenged.",
+            "choices": []
+        },
+        "calmWolf":{
+            "title": "Animal wisdom",
+            "text": "You slowly lower your bow and speak softly to the direwolf. Miraculously, it calms down and allows you to pet it. The direwolf then wiggles its tail leading you to an uncharted path. What do you do next?",
+            "choices": [
+                {"label": "Follow the direwolf", "nextId:" : "followWolf"},
+                {"label": "Return to the mapped path" , "nextId:" : "mapPath"}
+            ]
+        },
+        "dispelBarrier":{
+            "title": "Arcane Knowledge",
+            "text": "You focus your energy and cast a spell to dispel the magical barrier. It shimmers and fades away, allowing you to enter the ruins. Inside, you find two paths: one where purple light glows and another shrouded in darkness. Which path do you choose?",
+            "choices": [
+                {"label": "Take the glowing path", "nextId:" : "glowingPath"},
+                {"label": "Take the dark path" , "nextId:" : "darkPath"}
+            ]
+        },
+        "sidePassage":{
+            "title": "Stealthy Approach",
+            "text": "You decide to take the hidden passage, which leads you around the barrier. As you navigate through the narrow corridor, you hear a shutting sound behind you. The passage collapses, trapping you inside in total darkness. Your adventure ends here.",
+            "choices": []
+        },
+        "banditHunt":{
+            "title": "Vigilant Hero",
+            "text": "The bandidts lead you to their hideout, a hidden cave nearby the ancient ruins of the city. As you stealthily approach their lair, you see hidding near you two familiar faces - your childhood friends who also just started their adventuring journey, Rob the ranger and Elia the wizard. What do you do?",
+            "choices":[
+                {"label": "Coordinate with Rob and Elia to ambush the bandits", "nextId": "teamwork"},
+                {"label": "Confront the bandits alone to prove your strength" , "nextId": "soloFighter"}
+            ]
+        },
+        "townCelebration":{
+            "title": "Ending: Joyful Hero",
+            "text": "You give in to the cheers of the townsfolk, celebrating your successful protection of the city. The bandits remain at large, but for now, the city is safe.",
+            "choices": []
+        },
+        "followWolf":{
+            "title": "Loyal Companion",
+            "text": "You follow the direwolf down the uncharted path, which leads you to a hidden cave near the ancient ruins. After thanking the direwolf, you enter the cave and find the bandits' lair. As you prepare to confront them, you see hiding you two familiar faces - your childhood friends, Georg the fighter and Elia the wizard. What do you do?",
+            "choices":[
+                {"label": "Coordinate with Georg and Elia to ambush the bandits", "nextId": "teamwork"},
+                {"label": "Wait for the perfect moment to strike alone" , "nextId": "soloRanger"}
+            ]
+        },
+        "mapPath":{
+            "title": "Ending : Lost tracks",
+            "text": "You decide to return to the mapped path waving the direwolf goodbye. However, without its guidance, you soon find yourself unable to track the bandits. You wander the forest for a few days before finally finding your way back to the city, empty-handed.",
+            "choices": []
+        },
+        "glowingPath":{
+            "title": "Ending : Magic Portal",
+            "text": "You choose the path with the purple glow only to find a magical portal at the end. As you lay your eyes on it, you feel a strange pull. Stepping through the portal, you feel unimaginable exhalation. Last thing you remember is a soothing voice saying 'Shall we try again?'",
+            "choices": [{"label": "Open your eyes", "nextId": "camp"}]
+        },
+        "darkPath":{
+            "title": "Sudden Encounter",
+            "text": "You venture down the dark path, you see the flickering light of a campfire ahead. As you stealthily approach, you realize it's the hideout of the bandits that have been terrorizing the city. Just as you are about to plan your next move, you notice two familiar faces - your childhood friends, Georg the fighter and Rob the ranger. What do you do?",
+            "choices":[
+                {"label": "Coordinate with Georg and Rob to ambush the bandits", "nextId": "teamwork"},
+                {"label": "Show of your powerful magic and confront the bandits alone", "nextId": "soloWizard"}
+            ]     
+        },
+        "teamwork":{
+            "title": "Ending : United we stand",
+            "text": "You coordinate with your friends to launch a surprise attack on the bandits. With your combined skills, you easily overpower them and bring them to justice. The city is safe once again, and you and your friends become one of the greatest adventuring parties the continent has ever seen.",
+            "choices": []
+        },
+        "soloFighter":{
+            "title": "Ending : Lone Warrior",
+            "text": "You charge into the bandit hideout alone, relying on your strength and combat skills. Despite your bravery the bandits overwhelm you with their numbers. Your friend's efforts to help you unprepered fall short as you are all captured. Your adventure ends here.",
+            "choices": []
+        },
+        "soloRanger":{
+            "title": "Ending : Silent Hunter",
+            "text": "Waiting for the perfect moment, the bandits eventually notice your presence. Despite your stealth and archery skills, they manage to overpower you and your friends. Your adventure ends here.",
+            "choices": []
+        },
+        "soloWizard":{
+            "title": "Ending : Fool Mage",
+            "text": "You step into the bandit hideout alone, relying on your big and powerful spells. However, you are unable to fully control your magic, leading to damaging your friends and yourself. You fall short as you are all captured. Your adventure ends here.",
+            "choices": []
+        }
+    }
+}
