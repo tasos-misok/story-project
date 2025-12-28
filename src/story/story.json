@@ -7,7 +7,7 @@
             "text": "You wake up ready to take on the world, the time has finally come for your first quest hero. Choose your weapon wisely.",
             "choices": [
                 {"label": "Take the sword", "nextId": "fighterPath"},
-                {"label": "Take the bow", "nextId": "rangerPath"}
+                {"label": "Take the bow", "nextId": "rangerPath"},
                 {"label": "Take the staff", "nextId": "wizardPath"}
             ]
         },
