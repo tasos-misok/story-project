@@ -1,4 +1,4 @@
-import StoryPlayer from './components/StoryPlayer.jsx';
+import StoryPlayer from './components/StoryPlayer.tsx';
 
 function App() {
   return <StoryPlayer />;

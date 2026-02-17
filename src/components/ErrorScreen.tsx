@@ -1,6 +1,13 @@
-function ErrorScreen({ nodeId, onRestart }) {
+import styles from './ErrorScreen.module.css';
+
+interface ErrorScreenProps {
+    nodeId: string;
+    onRestart: () => void;
+}
+
+function ErrorScreen({ nodeId, onRestart }: ErrorScreenProps) {
     return (
-        <div>
+        <div className={styles.container}>
             <h1>Broken Story Link</h1>
             <p>
                 Node "<code>{nodeId}</code>" not found in story.

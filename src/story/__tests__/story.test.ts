@@ -1,10 +1,17 @@
 import { describe, it, expect } from 'vitest';
-import story from '../story.json';
+import type { StoryData } from '../../types/story.ts';
+import storyData from '../story.json';
 
+const story = storyData as StoryData;
 const { startNodeId, nodes } = story;
 const nodeIds = Object.keys(nodes);
 
 describe('story.json structure', () => {
+    it('has a title', () => {
+        expect(story.title).toBeDefined();
+        expect(typeof story.title).toBe('string');
+    });
+
     it('has a startNodeId that exists in nodes', () => {
         expect(startNodeId).toBeDefined();
         expect(nodes[startNodeId]).toBeDefined();
@@ -39,11 +46,11 @@ describe('story.json references', () => {
 
 describe('story.json reachability', () => {
     it('every node is reachable from startNodeId', () => {
-        const visited = new Set();
+        const visited = new Set<string>();
         const queue = [startNodeId];
 
         while (queue.length > 0) {
-            const current = queue.shift();
+            const current = queue.shift()!;
             if (visited.has(current)) continue;
             visited.add(current);
 

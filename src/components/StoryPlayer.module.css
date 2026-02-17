@@ -1,0 +1,19 @@
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 16px;
+}
+
+.content {
+    animation: fadeIn 300ms ease-in;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
